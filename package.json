@@ -1,11 +1,11 @@
 {
-  "name": "ecmascript",
+  "name": "App-puntes-Javascript",
   "version": "1.0.0",
-  "description": "Aprendiendo ECMAScript",
+  "description": "Apuntes de JS varios",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "JFelixZuniga",
-  "license": "ISC"
+  "license": "MIT"
 }
