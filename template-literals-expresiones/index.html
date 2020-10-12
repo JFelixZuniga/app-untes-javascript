@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template Literals - expresiones</title>
+  </head>
+
+  <body>
+    <script>
+      const nombre = "John";
+      console.log(`Mi nombre es ${nombre}`);
+      //En el siguiente caso un valor también es una expresión
+      console.log(`Mi nombre es ${29}`);
+      console.log(`Este es el ${"Curso de JavaScript para React"}`);
+      //'x' no va ni como constante ni como variable, sino, lo que hace el navegador es ponerla dentro de 'window', entonces, si tecleo en consola 'window.x' me devuelve 'John'
+      console.log(`Mi nombre es ${(x = "John")}`); //Mi nombre es John
+      //Debemos autoejecutar la función para obtener el resultado de la misma al ocupar los template literals
+      console.log(
+        `Mi nombre es ${(function name() {
+          return "Félix";
+        })()}`
+      );
+      //Como se está autoejecutando, no es necesario señalar un nombre a la función
+      console.log(
+        `Mi nombre es ${(function () {
+          return "John Félix";
+        })()}`
+      );
+      console.log(
+        `Mi nombre es ${(() => {
+          return "John Arrow Funtion";
+        })()}`
+      );
+
+      console.log(`Mi nombre es ${true && "John ternario"}`);
+
+      console.log(`Mi nombre es ${false ? "John true" : "Joohn false"}`);
+
+      //Muy ulitizado cuando se quiere renderizar una lista de algo
+      console.log(
+        `Mi nombre es ${["a", "b"].map((letra) => `${letra}-styled`)}`
+      );
+    </script>
+  </body>
+</html>
