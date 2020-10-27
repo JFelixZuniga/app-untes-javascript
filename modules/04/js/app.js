@@ -1,1 +1,0 @@
-import './icecream/index.js'
